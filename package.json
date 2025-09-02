@@ -1,0 +1,77 @@
+{
+  "name": "unocss-vertical-preset",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Cee Vee X <ceeveex@hotmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/ceeveex",
+  "homepage": "https://github.com/ceeveex/unocss-text-vertical#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceeveex/unocss-text-vertical.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ceeveex/unocss-text-vertical/issues"
+  },
+  "keywords": [
+    "unocss",
+    "presets"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "pnpm build --watch",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "pnpm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest ",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "@swc/core": "^1.7.0",
+    "@types/node": "^24.3.0",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.34.0",
+    "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^16.1.6",
+    "simple-git-hooks": "^2.13.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5.9.2",
+    "unocss": "^66.5.0",
+    "vite": "^7.1.4",
+    "vitest": "^3.2.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

@@ -1,0 +1,14 @@
+.cache
+.DS_Store
+.idea
+*.log
+*.tgz
+coverage
+dist
+lib-cov
+logs
+node_modules
+temp
+cache
+docs/.vitepress/dist.zip
+vite.config.ts.timestamp-*.mjs
